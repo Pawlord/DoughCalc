@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel='icon' href='./img/dodo.ico' type='image/x-icon'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="./js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap" rel="stylesheet">
+    <title>Калькульятор теста</title>
+  </head>
+  <body>
+    <div class="container-main-window">
+      <div class="main-window">
+        <header>
+          <img src="img/dodo-icon.png" alt="" >
+          <p class="main-title">Калькулятор теста</p>
+        </header>
+        <div class="main">
+
+          <div class="type-container">
+            <div class="type">
+              <p class="type-choise type-trays is-active">В лотках</p>
+              <p class="devinder-line type-choise">|</p>
+              <p class="type-choise type-kneadings">В замесах</p>
+            </div>
+  
+          </div>
+          
+          <form class="calc" action="index.html" method="post">
+            <div class="popup-help-first-line invisible">Введите количество израсходованных плюшек из "Додо ИС".</div>
+            <div class="popup-help-second-line invisible">Введите остаток плюшек в лотках или в замесах, в зависимости от выбранного переключателя.</div>
+
+            <div class="first-line-title title">
+              <p class="expenditure-title">Расход <img class="help-icon-first-line" src="./img/help.png" alt="help"></p>
+            </div>
+
+            <div class="first-line-form line-wrapper">
+              <input class="expenditure-25-form input-number" type="text" name="expenditure-25" value="" placeholder="25" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3">
+              <input class="expenditure-30-form input-number" type="text" name="expenditure-30" value="" placeholder="30" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3">
+              <input class="expenditure-35-form last-child input-number" type="text" name="expenditure-35" value="" placeholder="35" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3">
+            </div>
+
+            <div class="second-line-title title">
+              <p class="remainder-title">Остаток <img class="help-icon-second-line" src="./img/help.png" alt="help"></p>
+            </div>
+
+            <div class="second-line-form line-wrapper">
+              <input class="remainder-25-form input-number" type="text" name="remainder-25" value="" placeholder="25" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3">
+              <input class="remainder-30-form input-number" type="text" name="remainder-30" value="" placeholder="30" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3">
+              <input class="remainder-35-form input-number last-child" type="text" name="remainder-35" value="" placeholder="35" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3">
+            </div>
+          </form>
+          <div class="button-container line-wrapper">
+            <button class="button-help">Помощь</button>
+            <button class="button-calc">Рассчитать</button>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="instruction-window invisible">
+        <header>
+          <p>Инструкция</p>
+        </header>
+        <div class="instruction-content">
+          <ol class="instruction-list">
+            <li class="list-item"><span>Выберите, с помощью переключателя, в каком виде
+            производить расчет остатка теста: в лотках или в замесах;</span></li>
+            <li class="list-item"><span>Посчитайте с помощью "Додо ИС" расход теста
+            и впишите данные в соответствующие поля расхода, в зависимости
+            от размера плюшки (25, 30, 35);</span></li>
+            <li class="list-item"><span>Посчитайте остаток теста в холодильнике в лотках
+            или в замесах, в зависимости от того, какой вид расчета вы выбрали
+            в пункте 1 и впишите данные в соответствующие поля остатка;</span></li>
+            <li class="list-item"><span>После введения всех данных нажмите на кнопку "Рассчитать",
+            после чего программа выведет окно с результатами нормы заготовки теста на смену (в замесах).</span></li>
+          </ol>
+          <div class="instruction-btn-container">
+            <button class="instruction-btn" type="button" name="button">Ок</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-window invisible">
+
+        <header>
+          <p>Норма</p>
+        </header>
+
+        <div class="result-container">
+
+          <div class="result-title">
+            <p>25</p>
+            <p>30</p>
+            <p>35</p>
+          </div>
+
+          <div class="main-result">
+            <p class="result res-25">0</p>
+            <p class="result res-30">0</p>
+            <p class="result res-35">0</p>
+          </div>
+
+          <div class="popup-container">
+            <div class="popup-25 popup-item">
+              <p class="popup-text-expenditure">Расход:</p>
+              <p class="popup-text-rest">Остаток в лотках:</p>
+              <p class="popup-text-rest-piece">Остаток в плюшках:</p> 
+              <p class="popup-text-norm">Сделать: </p> 
+            </div>
+
+            <div class="popup-30 popup-item">
+              <p class="popup-text-expenditure">Расход:</p>
+              <p class="popup-text-rest">Остаток в лотках:</p>
+              <p class="popup-text-rest-piece">Остаток в плюшках:</p> 
+              <p class="popup-text-norm">Сделать: </p> 
+            </div>
+            <div class="popup-35 popup-item">
+              <p class="popup-text-expenditure">Расход:</p>
+              <p class="popup-text-rest">Остаток в лотках:</p>
+              <p class="popup-text-rest-piece">Остаток в плюшках:</p> 
+              <p class="popup-text-norm">Сделать: </p> 
+            </div>
+          </div>
+
+        </div>
+
+        <div class="result-buttons">
+          <button type="button" class="button-cancell">Развернуть</button>
+          <button type="button" class="button-ok">Ок</button>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
